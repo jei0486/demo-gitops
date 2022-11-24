@@ -5,4 +5,4 @@ resources:
 
 images:
 - name: jei0486/demo-api
-  newTag: v2
+  newTag: v3
