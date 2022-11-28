@@ -10,8 +10,8 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
-  - demo-api.yaml
+- demo-api.yaml
 
 images:
-  - name: jei0486/demo-api
-    newTag: v2
+- name: jei0486/demo-api
+  newTag: v2

@@ -10,9 +10,9 @@ generatorOptions:
   disableNameSuffixHash: true
 
 resources:
-  - demo-fe.yaml
-  - demo-fe-ingress.yaml
+- demo-fe.yaml
+- demo-fe-ingress.yaml
 
 images:
-  - name: jei0486/demo-fe
-    newTag: v2
+- name: jei0486/demo-fe
+  newTag: v2
