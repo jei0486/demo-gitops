@@ -14,5 +14,5 @@ resources:
 - demo-fe-ingress.yaml
 
 images:
-- name: jei0486/demo-fe
+- name: docker.io/jei0486/demo-fe
   newTag: v0.0.5

@@ -13,5 +13,5 @@ resources:
 - demo-api.yaml
 
 images:
-- name: jei0486/demo-api
+- name: docker.io/jei0486/demo-api
   newTag: v2

@@ -38,8 +38,8 @@ spec:
           ports:
             - name: http
               containerPort: 9090
-          command: ["java"]
-          args: ['-jar', '/app/application.jar', '--spring.config.locatin=/config/application.yaml']
+          #command: ["java"]
+          #args: ['-jar', '/app/application.jar', '--spring.config.locatin=/config/application.yaml']
           volumeMounts:
             - name: config
               mountPath: /config
