@@ -38,8 +38,7 @@ spec:
           ports:
             - name: http
               containerPort: 9099
-          command: ['jib']
-          args: ['jar','--target', '${TARGET_REGISTRY} ${JAR_NAME}.jar','--spring.config.locatin=/config/application.yaml']
+          #args: ['--spring.config.locatin=/config/application.yaml']
           volumeMounts:
             - name: config
               mountPath: /config
