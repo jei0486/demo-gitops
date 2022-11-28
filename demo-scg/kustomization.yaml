@@ -15,5 +15,5 @@ resources:
 - demo-scg-ingress.yaml
 
 images:
-- name: jei0486/demo-scg
+- name: docker.io/jei0486/demo-scg
   newTag: v0.0.1
