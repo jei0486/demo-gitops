@@ -17,3 +17,5 @@ resources:
 images:
 - name: docker.io/jei0486/demo-scg
   newTag: v0.0.1
+- name: jei0486/demo-scg
+  newTag: v0.0.1
