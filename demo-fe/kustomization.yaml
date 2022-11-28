@@ -15,4 +15,4 @@ resources:
 
 images:
 - name: jei0486/demo-fe
-  newTag: v0.0.4
+  newTag: v0.0.5
