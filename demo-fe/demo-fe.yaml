@@ -39,7 +39,7 @@ spec:
             - name: http
               containerPort: 9099
           command: ["java"]
-          args: ['-jar', 'demo-fe-0.0.1-SNAPSHOT.jar', '--spring.config.locatin=/config/application.yaml']
+          args: ['-jar', '/app/application.jar', '--spring.config.locatin=/config/application.yaml']
           volumeMounts:
             - name: config
               mountPath: /config
