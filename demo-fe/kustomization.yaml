@@ -3,9 +3,9 @@ kind: Kustomization
 namespace: fe
 
 configMapGenerator:
-- name: demo-fe-configmap
-  files:
+- files:
   - application.yaml
+  name: demo-fe-configmap
 generatorOptions:
   disableNameSuffixHash: true
 
@@ -15,4 +15,4 @@ resources:
 
 images:
 - name: jei0486/demo-fe
-  newTag: v2
+  newTag: v0.0.5
