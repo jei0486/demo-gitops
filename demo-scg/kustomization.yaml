@@ -4,16 +4,16 @@ namespace: gateway
 
 
 configMapGenerator:
-- name: demo-scg-configmap
-  files:
+- files:
   - application.yaml
+  name: demo-scg-configmap
 generatorOptions:
   disableNameSuffixHash: true
 
 resources:
-  - demo-scg.yaml
-  - demo-scg-ingress.yaml
+- demo-scg.yaml
+- demo-scg-ingress.yaml
 
 images:
-  - name: jei0486/demo-scg
-    newTag: v1
+- name: jei0486/demo-scg
+  newTag: v0.0.1
