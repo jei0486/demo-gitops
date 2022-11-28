@@ -3,9 +3,9 @@ kind: Kustomization
 namespace: api
 
 configMapGenerator:
-- name: demo-api-configmap
-  files:
+- files:
   - application.yaml
+  name: demo-api-configmap
 generatorOptions:
   disableNameSuffixHash: true
 
@@ -15,3 +15,5 @@ resources:
 images:
 - name: docker.io/jei0486/demo-api
   newTag: v2
+- name: jei0486/demo-api
+  newTag: v0.0.8
