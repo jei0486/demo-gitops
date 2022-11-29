@@ -21,6 +21,13 @@ spec:
         ports:
         - name: http
           containerPort: 9090
+        volumeMounts:
+          - name: config
+            mountPath: /config
+      volumes:
+      - name: config
+        configMap:
+          name: demo-scg-configmap
   minReadySeconds: 30
   revisionHistoryLimit: 3
   strategy:
@@ -29,4 +36,4 @@ spec:
       previewService: demo-scg-green-svc
       autoPromotionEnabled: false
       previewReplicaCount: 1
-      scaleDownDelaySeconds: 60  
+      scaleDownDelaySeconds: 60
