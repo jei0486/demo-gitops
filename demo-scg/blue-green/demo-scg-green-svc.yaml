@@ -8,7 +8,7 @@ metadata:
 spec:
   ports:
     - name: rest
-      port: 8080
+      port: 9090
       targetPort: http
   selector:
     app: demo-scg
