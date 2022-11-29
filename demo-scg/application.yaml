@@ -73,11 +73,6 @@ spring:
                   - POST
                   - PUT
                   - DELETE
-          filters:
-            - name: CircuitBreaker
-              args:
-                name: mycb
-                fallbackUri: forward:/fallback    # fallback은 Circuit 상태와 상관 없이, fail조건에 해당된 경우 호출됨
           metadata:
             connect-timeout: 2500
             response-timeout: 2500
