@@ -1,0 +1,31 @@
+
+apiVersion: argoproj.io/v1alpha1  
+kind: Rollout 
+metadata:
+  name: demo-scg-rollout
+  namespace: gateway
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: demo-scg
+  template:
+    metadata:
+      labels:
+        app: demo-scg
+    spec:
+      containers:
+      - name: demo-scg
+        image: jei0486/demo-scg
+        ports:
+        - name: http
+          containerPort: 9090
+  minReadySeconds: 30
+  revisionHistoryLimit: 3
+  strategy:
+    blueGreen:
+      activeService: demo-scg-blue-svc
+      previewService: demo-scg-green-svc
+      autoPromotionEnabled: false
+      previewReplicaCount: 1
+      scaleDownDelaySeconds: 60  
