@@ -39,7 +39,7 @@ spec:
             - name: http
               containerPort: 9090
           command: ["java"]
-          args: ['-cp', '/app/jib-classpath-file','com.demo.scg.DemoScgApplication', '--spring.config.locatin=/config/application.yaml']
+          args: ['-cp', '/app','org.springframework.boot.loader.JarLauncher', '--spring.config.locatin=/config/application.yaml']
           volumeMounts:
             - name: config
               mountPath: /config
