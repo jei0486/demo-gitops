@@ -21,8 +21,20 @@ spec:
         ports:
         - name: http
           containerPort: 9090
+          volumeMounts:
+            - name: config
+              mountPath: /config
+          env:
+            - name: 'spring.application.name'
+              value: 'demo-scg'
+      volumes:
+        - name: config
+          configMap:
+            name: demo-scg-configmap
   minReadySeconds: 30
   revisionHistoryLimit: 3
+
+  ###
   strategy:
     blueGreen:
       activeService: demo-scg-blue-svc
