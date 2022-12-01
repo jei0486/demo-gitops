@@ -1,13 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: demo-scg-ingress
+  name: demo-scg-green-ingress
   namespace: gateway
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: "dev.demo.com"
+    - host: "demo.com"
       http:
         paths:
           - pathType: Prefix
