@@ -54,8 +54,8 @@ spring:
             redirect-uri: "{baseUrl}/login/oauth2/code/keycloak"
   cloud:
     gateway:
-      default-filters:
-        - TokenRelay
+      # default-filters:
+      #   - TokenRelay
       routes:
         - id: demo-fe-board
           uri: http://demo-fe-svc.fe:9099/
