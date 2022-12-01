@@ -7,8 +7,9 @@ metadata:
     app: demo-scg
 spec:
   ports:
-    - name: blue
-      port: 8080
-      targetPort: http
+  - protocol: TCP
+    name: http
+    port: 8080
+    targetPort: http
   selector:
     app: demo-scg
