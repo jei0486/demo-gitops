@@ -1,12 +1,22 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: demo-scg-green-ingress
+  name: demo-scg-blue-ingress
   namespace: gateway
   annotations:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
+  - host: "demo.com"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: demo-scg-blue-svc
+            port:
+              number: 9090
   - host: "dev.demo.com"
     http:
       paths:
