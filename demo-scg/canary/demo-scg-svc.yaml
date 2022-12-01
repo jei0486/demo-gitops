@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: demo-scg-svc
+  namespace: gateway
+  labels:
+    app: demo-scg
+spec:
+  selector:
+    app: demo-scg
+  ports:
+  - protocol: TCP
+    name: http
+    port: 9090
+    targetPort: http
