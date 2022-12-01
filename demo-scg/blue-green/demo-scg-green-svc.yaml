@@ -9,7 +9,7 @@ spec:
   ports:
   - protocol: TCP
     name: http
-    port: 9090
+    port: 8080
     targetPort: http
   selector:
     app: demo-scg

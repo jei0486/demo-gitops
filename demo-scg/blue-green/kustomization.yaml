@@ -15,6 +15,7 @@ resources:
 - demo-scg-blue-svc.yaml
 - demo-scg-green-svc.yaml
 - demo-scg-blue-ingress.yaml
+- demo-scg-green-ingress.yaml
 
 
 
