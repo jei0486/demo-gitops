@@ -7,7 +7,7 @@ metadata:
     app: demo-scg
 spec:
   ports:
-    - name: rest
+    - name: green
       port: 9090
       targetPort: http
   selector:
