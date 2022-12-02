@@ -38,13 +38,12 @@ spec:
           ports:
             - name: http
               containerPort: 9090
-          volumeMounts:
-            - name: config
-              mountPath: /config
           env:
             - name: 'spring.application.name'
               value: 'demo-scg'
-      volumes:
-        - name: config
-          configMap:
-            name: demo-scg-configmap
+            - name: 'spring.profiles.active'
+              value: 'dev'
+            - name: "KUBERNETES_NAMESPACE"
+              valueFrom:
+                fieldRef:
+                  fieldPath: "metadata.namespace"
