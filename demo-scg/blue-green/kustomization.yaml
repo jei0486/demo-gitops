@@ -19,4 +19,4 @@ resources:
 
 images:
 - name: jei0486/demo-scg
-  newTag: P21
+  newTag: P22
