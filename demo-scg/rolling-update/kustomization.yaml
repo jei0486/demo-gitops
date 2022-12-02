@@ -16,4 +16,4 @@ resources:
 
 images:
 - name: jei0486/demo-scg
-  newTag: v0.2.1
+  newTag: v2.3
