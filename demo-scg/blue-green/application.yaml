@@ -18,14 +18,14 @@ management:
     web:
       exposure:
         include: "*"
-  endpoint:
     shutdown:
       enabled: true
     health:
       show-details: always
   health:
-    circuitbreakers:
-      enabled: true
+    circuitbreakers.enabled: true
+    ratelimiters.enabled: true
+      
 
 
 logging:
