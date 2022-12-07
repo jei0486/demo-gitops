@@ -16,7 +16,7 @@ spec:
           service:
             name: demo-scg-blue-svc
             port:
-              number: 9090
+              number: 8080
   - host: "dev.demo.com"
     http:
       paths:
@@ -26,4 +26,4 @@ spec:
           service:
             name: demo-scg-green-svc
             port:
-              number: 9090
+              number: 8080

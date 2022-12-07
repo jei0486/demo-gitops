@@ -1,6 +1,3 @@
-server:
-  port: 9090
-
 resilience4j.circuitbreaker:
   configs:
     default:
@@ -58,7 +55,7 @@ spring:
         - TokenRelay
       routes:
         - id: demo-fe-board
-          uri: http://demo-fe-svc.fe:9099/
+          uri: http://demo-fe-svc.fe:8080/
           predicates:
             - name: Path
               args:
@@ -75,12 +72,12 @@ spring:
             response-timeout: 2500
 
         - id: demo-fe-api
-          uri: http://demo-fe-svc.fe:9099/
+          uri: http://demo-fe-svc.fe:8080/
           predicates:
             - Path=/api/**
 
         - id: demo-fe-circuit
-          uri: http://demo-fe-svc.fe:9099/
+          uri: http://demo-fe-svc.fe:8080/
           predicates:
             - Path=/boards/fail
           filters:
