@@ -14,4 +14,4 @@ resources:
 
 images:
 - name: jei0486/demo-api
-  newTag: v0.1.0
+  newTag: v1.0.0
